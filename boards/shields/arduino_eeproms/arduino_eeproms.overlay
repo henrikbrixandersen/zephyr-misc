@@ -1,0 +1,36 @@
+/*
+ * Copyright (c) 2019 Vestas Wind Systems A/S
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+&arduino_i2c {
+	status = "okay";
+
+	eeprom@57 {
+		compatible = "atmel,at24";
+		reg = <0x57>;
+		label = "EEPROM_0";
+                size = <32768>;
+                pagesize = <64>;
+                address-width = <16>;
+		timeout = <5>;
+                wp-gpios = <&gpioc 12 GPIO_INT_ACTIVE_HIGH>;
+	};
+};
+
+&arduino_spi {
+	status = "okay";
+
+	eeprom@0 {
+		compatible = "atmel,at25";
+		reg = <0x0>;
+                spi-max-frequency = <1000000>;
+		label = "EEPROM_1";
+                size = <256>;
+                pagesize = <16>;
+                address-width = <8>;
+		timeout = <5>;
+                wp-gpios = <&gpioc 4 GPIO_INT_ACTIVE_LOW>;
+	};
+};
