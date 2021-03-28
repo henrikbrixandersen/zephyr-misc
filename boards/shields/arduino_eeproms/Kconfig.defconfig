@@ -1,0 +1,21 @@
+# Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
+# SPDX-License-Identifier: Apache-2.0
+
+if SHIELD_ARDUINO_EEPROMS
+
+config SPI
+	default y
+
+config I2C
+	default y
+
+config EEPROM
+	default y
+
+config EEPROM_AT24
+	default y
+
+config EEPROM_AT25
+	default y
+
+endif # SHIELD_ARDUINO_EEPROMS

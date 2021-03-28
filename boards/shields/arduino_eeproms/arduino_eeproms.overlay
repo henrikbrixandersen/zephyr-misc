@@ -1,8 +1,9 @@
 /*
- * Copyright (c) 2019 Vestas Wind Systems A/S
- *
+ * Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
  * SPDX-License-Identifier: Apache-2.0
  */
+
+#include <dt-bindings/gpio/gpio.h>
 
 &arduino_i2c {
 	status = "okay";
@@ -15,7 +16,7 @@
                 pagesize = <64>;
                 address-width = <16>;
 		timeout = <5>;
-                wp-gpios = <&gpioc 12 GPIO_INT_ACTIVE_HIGH>;
+                /* wp-gpios = <&arduino_header 14 GPIO_INT_ACTIVE_HIGH>; */
 	};
 };
 
@@ -31,6 +32,6 @@
                 pagesize = <16>;
                 address-width = <8>;
 		timeout = <5>;
-                wp-gpios = <&gpioc 4 GPIO_INT_ACTIVE_LOW>;
+                /* wp-gpios = <&arduino_header 15 GPIO_INT_ACTIVE_LOW>; */
 	};
 };
