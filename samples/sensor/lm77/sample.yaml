@@ -1,0 +1,8 @@
+sample:
+  name: LM77 Sensor Sample
+tests:
+  sample.sensor.lm77:
+    platform_allow: frdm_k64f
+    tags: shell sensor
+    harness: shield
+    depends_on: arduino_i2c
