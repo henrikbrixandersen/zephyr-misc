@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <dt-bindings/gpio/gpio.h>
+
+&arduino_i2c {
+	status = "okay";
+
+	hwmon@48 {
+		compatible = "lm77";
+		reg = <0x48>;
+		label = "LM77";
+                int-gpios = <&arduino_header 8 GPIO_ACTIVE_LOW>;
+	};
+
+	/*hwmon@49 {
+		compatible = "lm77";
+		reg = <0x49>;
+		label = "LM77_BOGUS";
+	};*/
+};

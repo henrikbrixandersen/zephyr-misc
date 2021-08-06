@@ -1,0 +1,15 @@
+# Copyright (c) 2021 Henrik Brix Andersen <henrik@brixandersen.dk>
+# SPDX-License-Identifier: Apache-2.0
+
+if SHIELD_ARDUINO_LM77
+
+config I2C
+	default y
+
+config SENSOR
+	default y
+
+config LM77
+	default y
+
+endif # SHIELD_ARDUINO_LM77
