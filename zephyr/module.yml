@@ -1,0 +1,6 @@
+name: zephyr-misc
+build:
+  settings:
+    board_root: .
+samples:
+  - samples
