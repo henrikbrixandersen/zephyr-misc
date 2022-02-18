@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) 2022 Henrik Brix Andersen <henrik@brixandersen.dk>
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+	tja1042: can-transceiver {
+		compatible = "nxp,tja1042", "can-transceiver-gpio";
+		max-bitrate = <5000000>;
+		standby-gpios = <&gpiod 2 GPIO_ACTIVE_HIGH>; /* PD2 */
+		#phy-cells = <0>;
+	};
+};
+
+&can1 {
+	phys = <&tja1042>;
+};

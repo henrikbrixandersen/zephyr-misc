@@ -1,0 +1,5 @@
+# Copyright (c) 2022 Henrik Brix Andersen <henrik@brixandersen.dk>
+# SPDX-License-Identifier: Apache-2.0
+
+config SHIELD_STM32F3_DISCO_CANBUS
+        def_bool $(shields_list_contains,stm32f3_disco_canbus)
