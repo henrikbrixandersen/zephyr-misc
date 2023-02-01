@@ -1,0 +1,6 @@
+sample:
+  name: CAN shell sample
+tests:
+  sample.drivers.can.shell:
+    tags: can shell
+    harness: keyboard
